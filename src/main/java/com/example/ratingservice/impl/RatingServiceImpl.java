@@ -38,9 +38,4 @@ public class RatingServiceImpl implements RatingService {
         return ratingRepository.findAllByRatingid(ratingid);
     }
 
-    @Override
-    public Rating getRating(int id) {
-        return null;
-    }
-
 }
