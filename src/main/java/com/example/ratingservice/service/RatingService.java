@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import java.util.List;
 
-@FeignClient(name="RATING-SERVICES")
 public interface RatingService {
 
     Rating create(Rating rating);
@@ -15,6 +14,4 @@ public interface RatingService {
     List<Rating> getRatingByHotelid(int hotelid);
     List<Rating> getRatingByRatingid(int ratingid);
 
-    @GetMapping("/ratings/{id}")
-    Rating getRating(@PathVariable int id);
 }
