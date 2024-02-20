@@ -17,6 +17,9 @@ spring:
   application:
     name: RATING-SERVICE
 
+  config:
+    import: optional:configserver:http://localhost:8086
+
 eureka:
   instance:
     prefer-ip-address: true
