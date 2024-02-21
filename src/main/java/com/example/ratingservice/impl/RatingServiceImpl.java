@@ -15,9 +15,6 @@ public class RatingServiceImpl implements RatingService {
     @Autowired
     private RatingRepository ratingRepository;
 
-    @Autowired
-    private HotelService hotelService;
-
     @Override
     public Rating create(Rating rating) {
         return ratingRepository.save(rating);
@@ -42,8 +39,4 @@ public class RatingServiceImpl implements RatingService {
     public List<Rating> getRatingByRatingid(int ratingid) {
         return ratingRepository.findAllByRatingid(ratingid);
     }
-
-//    private Hotel get(int hotelId) {
-//        return hotelService.getHotel(hotelId);
-//    }
 }
