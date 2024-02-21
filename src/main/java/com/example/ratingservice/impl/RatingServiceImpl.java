@@ -43,7 +43,7 @@ public class RatingServiceImpl implements RatingService {
         return ratingRepository.findAllByRatingid(ratingid);
     }
 
-    private Hotel get(int hotelId) {
-        return hotelService.getHotel(hotelId);
-    }
+//    private Hotel get(int hotelId) {
+//        return hotelService.getHotel(hotelId);
+//    }
 }
