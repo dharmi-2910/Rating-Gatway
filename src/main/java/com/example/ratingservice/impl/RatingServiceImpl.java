@@ -1,9 +1,7 @@
 package com.example.ratingservice.impl;
 
-import com.example.ratingservice.Entities.Hotel;
 import com.example.ratingservice.Entities.Rating;
 import com.example.ratingservice.repository.RatingRepository;
-import com.example.ratingservice.service.HotelService;
 import com.example.ratingservice.service.RatingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
