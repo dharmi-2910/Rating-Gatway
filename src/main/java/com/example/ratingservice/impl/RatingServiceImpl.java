@@ -1,7 +1,9 @@
 package com.example.ratingservice.impl;
 
+import com.example.ratingservice.Entities.Hotel;
 import com.example.ratingservice.Entities.Rating;
 import com.example.ratingservice.repository.RatingRepository;
+import com.example.ratingservice.service.HotelService;
 import com.example.ratingservice.service.RatingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,6 +14,9 @@ public class RatingServiceImpl implements RatingService {
 
     @Autowired
     private RatingRepository ratingRepository;
+
+    @Autowired
+    private HotelService hotelService;
 
     @Override
     public Rating create(Rating rating) {
@@ -38,4 +43,7 @@ public class RatingServiceImpl implements RatingService {
         return ratingRepository.findAllByRatingid(ratingid);
     }
 
+    private Hotel get(int hotelId) {
+        return hotelService.getHotel(hotelId);
+    }
 }
