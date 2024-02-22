@@ -1,20 +1,21 @@
 server:
   port: 9090
-
 spring:
-  datasource:
-    url: ${DATABASE_URL}
-    username: ${DATABASE_USERNAME}
-    password: ${DATABASE_PASSWORD}
-    driver-class-name: ${DATABASE_DRIVER_CLASS_NAME}
-  jpa:
-    hibernate:
-      ddl-auto: ${HIBERNATE_DDL_AUTO}
-    properties:
-      hibernate:
-        dialect: ${HIBERNATE_DIALECT}
-
-        application:
-           name: USER-SERVICE
+  application:
+    name: RATING-SERVICE
   config:
     import: optional:configserver:http://localhost:8086
+  datasource:
+    url: ${datasource.url}
+    username: ${datasource.username}
+    password: ${datasource.password}
+    driver-class-name: ${datasource.driver-class-name}
+  jpa:
+    hibernate:
+      ddl-auto: ${hibernate.ddl.auto}
+    properties:
+      hibernate:
+        dialect: ${hibernate.dialect}
+
+
+
